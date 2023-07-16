@@ -10,6 +10,7 @@ import {
   styled,
   Toolbar,
   Typography,
+IconButton
 } from "@mui/material";
 import React, { useState } from "react";
 
@@ -50,7 +51,10 @@ const Navbar = () => {
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           Hassan khan
         </Typography>
-        <Pets sx={{ display: { xs: "block", sm: "none" } }} />
+	<IconButton onClick={()=>{setOpen(true)}}>
+<Pets sx={{ display: { xs: "block", sm: "none" } }} />
+</IconButton>
+        
         <Search>
           <InputBase placeholder="search..." />
         </Search>
